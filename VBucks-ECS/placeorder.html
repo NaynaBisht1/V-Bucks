@@ -1,0 +1,190 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        
+        }
+        .table {
+            flex: 1;
+            margin: 40px;
+            position: relative;
+        }
+
+        button {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 2;
+        }
+
+        iframe.footer {
+            width: 100%;
+            height: 180px; /* Adjust the height of the iframe as needed */
+            border: none; /* Remove the border to avoid extra space */
+        }
+        h2 {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 28px;
+    }
+    </style>
+
+</head>
+
+<body>
+        <iframe src="header.html" title="Header" width="100%" height="80"></iframe>
+
+        <h2>Welcome To Stor123</h2>
+
+        <main class="table" >
+            <section class="table-header">
+                <h1>Place Order</h1>
+                <div class="input-group">
+                    <input type="search" placeholder="Search food items">
+                    <img src="search_5186446.png" alt="">
+                </div>
+            </section>
+        
+            <section class="table-body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Food Item</th>
+                            <th>Category</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><img src="Burger-43.png" alt="" >Cheese Burger</td>
+                            <td>Burger</td>
+                            <td><strong>&#8377 180</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td><img src="Burger-43.png" alt="">Chicken Burger</td>
+                            <td>Burger</td>
+                            <td><strong>&#8377 220</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td><img src="sandwich.png" alt="">Grilled Sandwich</td>
+                            <td>Sandwich</td>
+                            <td><strong>&#8377 165</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td><img src="sandwich.png" alt="">Plain Sandwich</td>
+                            <td>Sandwich</td>
+                            <td><strong>&#8377 150</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+
+                        <tr>
+                            <td>1</td>
+                            <td><img src="Pizza.webp" alt="">Margherita Pizza</td>
+                            <td>Pizza</td>
+                            <td><strong>&#8377 190</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td><img src="Pizza.webp" alt="">Farmhouse Pizza</td>
+                            <td>Pizza</td>
+                            <td><strong>&#8377 250</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td><img src="noodles.jpg" alt="">Hakka Noodles</td>
+                            <td>Noodles</td>
+                            <td><strong>&#8377 145</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td><img src="spring rolls.avif" alt="">Spring Rolls</td>
+                            <td>Starters</td>
+                            <td><strong>&#8377 145</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td><img src="spring rolls.avif" alt="">Chilli Paneer</td>
+                            <td>Starters</td>
+                            <td><strong>&#8377 160</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>1</td>
+                            <td><img src="gulab jamun.jpg" alt="">Gulab Jamun</td>
+                            <td>Dessert</td>
+                            <td><strong>&#8377 60</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td><img src="Black forest.jpg" alt="">Black Forest</td>
+                            <td>Dessert</td>
+                            <td><strong>&#8377 90</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td><img src="coffee.webp" alt="">Cappuccino</td>
+                            <td>Coffe</td>
+                            <td><strong>&#8377 700</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td><img src="coffee.webp" alt="">Cafe Latte</td>
+                            <td>Coffee</td>
+                            <td><strong>&#8377 50</strong></td>
+                            <td><input type="number" placeholder="0"></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </section>
+            <button>Add To Cart</button>
+        </main>
+        
+    <iframe src="footer.html" title="Footer" class="footer"></iframe>
+</body>
+</html>
