@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoreLogin </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        .animated-image {
+            animation: moveUpDown 1.5s infinite alternate; /* Adjust the animation duration as needed */
+        }
+    
+        @keyframes moveUpDown {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(10px); /* Adjust the distance to move in the y-axis */
+            }
+        }
+        .button-container button {
+            margin: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background-color: rgb(30 58 138); /* equivalent to bg-blue-900 */
+            border-radius: 0.75rem; /* equivalent to rounded-xl */
+            color: #ffffff; /* equivalent to text-white */
+            padding-top: 0.5rem; /* equivalent to py-2 */
+            padding-bottom: 0.5rem; /* equivalent to py-2 */
+            cursor: pointer; /* equivalent to cursor-pointer */
+            transition: transform 0.3s ease; /* equivalent to hover:scale-105 duration-300 */
+            width: 19rem;
+        }
+
+        .button-container button:hover {
+            transform: scale(1.05); /* equivalent to hover:scale-105 */
+        }
+
+        .button-container button {
+            margin-top: 2.5rem; /* equivalent to mt-4 */
+        }
+
+        @media (max-width: 768px) {
+            .button-container button {
+            width: 100%;
+            }
+            .button-container button {
+            margin-top: 1.5rem;
+            }
+        }
+        iframe.footer {
+        width: 100%;
+        height: 180px;
+        border: none;
+        margin-top: 20px; /* Added line */
+        }
+    </style>
+    
+</head>
+<body>
+
+  <div style="flex: 1;">
+
+    <iframe src="header.html" title="Header" width="100%" height="100"></iframe>
+
+    <section class="bg-blue-50 min-h-screen flex items-center justify-center">
+        <!-- login container -->
+        <div class="bg-blue-100 flex rounded-2xl shadow-lg max-w-3xl p-5">
+            <!-- form -->
+            <div class="w-1/2 px-8">
+                <h2 class="font-bold text-3xl text-blue-900">Store Login</h2>
+                <form action="#" class="flex flex-col gap-2 mt-4">
+                    <p class="text-blue-900 text-lg">Store ID</p>
+                    <input class="p-2 rounded-xl border" type="name" name="regnum" placeholder="stor123">
+
+                    <p class="text-blue-900 text-lg mt-2">Password</p>
+                    <div class="relative">
+                        <input class="p-2 rounded-xl border w-full" type="password" name="password" placeholder="*******">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-eye absolute top-1/3 right-3" viewBox="0 0 16 16">
+                            <path d="M16 8s-3-5.5-8-5.5S0 8 0 8s3 5.5 8 5.5S16 8 16 8zM1.173 8a13.133 13.133 0 0 1 1.66-2.043C4.12 4.668 5.88 3.5 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.133 13.133 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755C11.879 11.332 10.119 12.5 8 12.5c-2.12 0-3.879-1.168-5.168-2.457A13.134 13.134 0 0 1 1.172 8z"/>
+                            <path d="M8 5.5a2.5 2.5 0 1 0 0 5 2.5 2.5 0 0 0 0-5zM4.5 8a3.5 3.5 0 1 1 7 0 3.5 3.5 0 0 1-7 0z"/>
+                        </svg>
+                    </div>
+                </form>
+
+                    <div class="flex flex-wrap justify-center button-container mb-2 ">
+                        <a href="placeorder.html">
+                            <button>Login</button>
+                        </a>
+                    </div>
+            </div>
+            <!-- image -->
+            <div class="w-1/2 ">
+                <img class="rounded-xl block animated-image" 
+                src="2306.i402.024.F.m004.c9.Credit score flat background.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    </div>
+    
+    <iframe src="footer.html" title="Footer" class="footer"></iframe>
+
+
+</body>
+</html>
