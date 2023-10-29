@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
     totalLabel.style.fontWeight = 'bold';
 
     totalAmount.textContent = `₹ ${total}`;
-    totalAmount.setAttribute('colspan', '1');
+    totalAmount.setAttribute('colspan', '2');
     totalAmount.style.textAlign = 'right';
     totalAmount.style.fontWeight = 'bold';
 
