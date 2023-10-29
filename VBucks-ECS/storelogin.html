@@ -7,8 +7,6 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="passwordvisibility.js"></script>
-
     <style>
         .animated-image {
             animation: moveUpDown 1.5s infinite alternate; /* Adjust the animation duration as needed */
@@ -100,6 +98,30 @@
             </div>
         </div>
     </section>
+    </div>
+
+    <div>
+        <script>
+            function togglePasswordVisibility() {
+                var passwordInput = document.getElementsByName("password")[0];
+                var eyeIcon = document.querySelector(".bi-eye");
+        
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    eyeIcon.classList.remove("bi-eye");
+                    eyeIcon.classList.add("bi-eye-slash");
+                } else {
+                    passwordInput.type = "password";
+                    eyeIcon.classList.remove("bi-eye-slash");
+                    eyeIcon.classList.add("bi-eye");
+                }
+            }
+        
+            document.addEventListener("DOMContentLoaded", function() {
+                var eyeIcon = document.querySelector(".bi-eye");
+                eyeIcon.addEventListener("click", togglePasswordVisibility);
+            });
+        </script>
     </div>
     
     <iframe src="footer.html" title="Footer" class="footer"></iframe>
