@@ -7,7 +7,6 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <script src="passwordvisibility.js"></script>
 
     <style>
         .animated-image {
@@ -60,8 +59,9 @@
 
                     <p class="text-blue-900 text-lg mt-2">Phone Number</p>
                     <div class="relative">
-                        <input class="p-2 rounded-xl border w-full" type="password" name="password" placeholder="+91 9406758231">
+                        <input class="p-2 rounded-xl border w-full" type="tel" name="phone" placeholder="+91 9406758231">
                     </div>
+
 
                     <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4">Register</button>
                 </form>
@@ -73,6 +73,31 @@
         </div>
     </section>
   </div>
+
+  <script>
+    function togglePasswordVisibility() {
+        var passwordInput = document.querySelector('input[name="password"]');
+        var eyeIcon = document.querySelector(".bi-eye");
+
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            eyeIcon.classList.remove("bi-eye");
+            eyeIcon.classList.add("bi-eye-slash");
+        } else {
+            passwordInput.type = "password";
+            eyeIcon.classList.remove("bi-eye-slash");
+            eyeIcon.classList.add("bi-eye");
+        }
+    }
+
+    // Attach click event to the eye icon
+    document.addEventListener("DOMContentLoaded", function() {
+        var eyeIcon = document.querySelector(".bi-eye");
+        eyeIcon.addEventListener("click", togglePasswordVisibility);
+    });
+</script>
+
+
     
   <iframe src="footer.html" title="Footer" class="footer"></iframe>
 </body>
