@@ -4,7 +4,7 @@
     $DBpassword = "";
     $DBname = "vbucks";
 
-    $conn = new mysqli($servername, $DBusername, $DBpassword, $DBname);
+    $conn = mysqli_connect($servername, $DBusername, $DBpassword, $DBname);
     if (!$conn){
         die("Connection Failed: ". mysqli_connect_error());
     }
