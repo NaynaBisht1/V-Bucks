@@ -13,7 +13,7 @@ function uidExists($conn ,$regnum){
     $sql = "SELECT * FROM stores WHERE storesId = ?;";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ../RegisterStore.html?error=stmtfail");
+        header("location: ../RegisterStore.php?error=stmtfail");
         exit();
     }
     mysqli_stmt_bind_param($stmt, 's', $regnum);
@@ -31,7 +31,7 @@ function createUser($conn, $name, $regnum, $pwd){
     $sql = "INSERT INTO stores (storesName, storesId, storesPwd) VALUES (?,?,?);";
     $stmt = mysqli_stmt_init($conn);
     if(!mysqli_stmt_prepare($stmt, $sql)){
-        header("location: ../RegisterStore.html?error=stmtfailed");
+        header("location: ../RegisterStore.php?error=stmtfailed");
         exit();
     }
 
@@ -39,6 +39,6 @@ function createUser($conn, $name, $regnum, $pwd){
     mysqli_stmt_bind_param($stmt, "sss", $name, $regnum, $hashedPwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
-    header("location: ../RegisterStore.html?error=none");
+    header("location: ../RegisterStore.php?error=none");
     exit();
 }

@@ -9,11 +9,11 @@
         require_once 'functionstore.inc.php';
 
         if (emptyInputSignup($name, $regnum, $pwd) !== false){
-            header("location: ../RegisterStore.html?error = emptyinput");
+            header("location: ../RegisterStore.php?error=emptyinput");
             exit();
         }
         if (uidExists($conn, $regnum) !== false){
-            header("location: ../RegisterStore.html?error=regnumberexists");
+            header("location: ../RegisterStore.php?error=regnumberexists");
         } 
     createUser($conn, $name, $regnum, $pwd);
     exit();
