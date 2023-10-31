@@ -42,3 +42,34 @@ function createUser($conn, $name, $regnum, $pwd){
     header("location: ../RegisterStore.php?error=none");
     exit();
 }
+
+function emptyInputLogin($regnum, $pwd){
+    $result = true;
+    if(empty($regnum) || empty($pwd)){
+        $result = true;
+    }
+    else{
+        $result = false;
+    }
+    return $result;
+}
+
+function loginUser($conn, $regnum, $pwd){
+    $regnumexists = uidExists($conn, $regnum);
+    if($regnumexists == false){
+        header("location: ../storelogin.php?error=wronglogin");
+        exit();
+    }
+    $pwdhashed = $regnumexists["storesPwd"];
+    $checkPwd = password_verify($pwd, $pwdhashed);
+    if($checkPwd == false){
+        header("location: ../storelogin.php?error=wrongpassword");
+        exit();
+    }
+    else if($checkPwd == true){
+        session_start();
+        $_SESSION["regnumber"] = $regnumexists["regnum"];
+        header("location: ../billing.html");
+        exit(); 
+    }
+}
