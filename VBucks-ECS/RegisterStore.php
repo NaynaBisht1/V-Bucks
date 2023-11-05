@@ -38,7 +38,7 @@
   
   <div style="flex: 1;">
 
-    <iframe src="header.html" title="Header" width="100%" height="100"></iframe>
+    <iframe src="header.php" title="Header" width="100%" height="100"></iframe>
 
     <section class="bg-blue-50 min-h-screen flex items-center justify-center">
         <div class="bg-blue-100 flex rounded-2xl shadow-lg max-w-3xl p-5">
@@ -62,9 +62,25 @@
                         </svg>
                     </div>
 
-                    <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4" type="button" onclick="location.href='index.html'">Register</button>
+                    <button type="submit" name = "submit" class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4">Register</button>
 
                 </form>
+                <?php
+                    if(isset($_GET["error"])) {
+                        if($_GET["error"] == "emptyinput"){
+                            echo "<p>Fill in all the Fields!</p>";
+                        }
+                        else if($_GET["error"] == "regnumberexists"){
+                            echo "<p>Store ID already exists.</p>";
+                        }
+                        else if($_GET["error"] == "stmtfail" || $_GET["error"] == "stmtfailed") {
+                            echo "<p>Please try again.</p>";
+                        }
+                        else if($_GET["error"] == "none") {
+                            echo "<p>You have registered successfully!</p>";
+                        }
+                    }
+                ?>
             </div>
             <div class="w-1/2 ">
                 <img class="rounded-xl block animated-image" 
@@ -105,7 +121,7 @@
     </script>
   </div>
     
-    <iframe src="footer.html" title="Footer" class="footer"></iframe>
+    <iframe src="footer.php" title="Footer" class="footer"></iframe>
 </body>
 </html>
 
