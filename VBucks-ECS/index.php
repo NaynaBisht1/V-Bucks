@@ -51,7 +51,7 @@
 
     <div style="flex: 1;">
 
-        <iframe src="header.html" title="Header" width="100%" height="100"></iframe>
+        <iframe src="header.php" title="Header" width="100%" height="100"></iframe>
         
         <section class="text-gray-600 body-font">
             <div class="container mx-auto flex flex-col px-5 items-center justify-center">
@@ -61,16 +61,16 @@
                     <br class="hidden lg:inline-block">Your Offline Campus Currency
                 </h1>
                 <div class="flex flex-wrap justify-center button-container mb-4"> <!-- Added button-container class here -->
-                <a href="RegisterStore.html">
+                <a href="RegisterStore.php">
                     <button class="m-2 md:w-auto bg-blue-900 hover:bg-blue-300 text-white py-2 px-4 rounded">Register as Store</button>
                 </a>                    
-                <a href="RegisterStudent.html">
+                <a href="RegisterStudent.php">
                     <button class="m-2 md:w-auto bg-blue-900 hover:bg-blue-300 text-white py-2 px-4 rounded">Register as Student</button>
                 </a>        
-                <a href="StoreLogin.html">
+                <a href="StoreLogin.php">
                     <button class="m-2 md:w-auto bg-blue-900 hover:bg-blue-300 text-white py-2 px-4 rounded">Login as Store</button>
                 </a>
-                <a href="StudentLogin.html">    
+                <a href="StudentLogin.php">    
                     <button class="m-2 md:w-auto bg-blue-900 hover:bg-blue-300 text-white py-2 px-4 rounded">Login as Student</button>
                 </a>
                 </div>
@@ -79,6 +79,6 @@
         </section>
     </div>
 
-    <iframe src="footer.html" title="Footer" class="footer"></iframe>
+    <iframe src="footer.php" title="Footer" class="footer"></iframe>
 </body>
 </html>
