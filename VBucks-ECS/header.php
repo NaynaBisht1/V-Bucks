@@ -1,3 +1,8 @@
+<?php
+    session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,10 +49,15 @@
         </a>
         </div>
         <nav class="flex">
-            <a href="index.html" target="_parent" class="hover:text-gray-900">Home</a>
-            <a href="index.html" target="_parent" class="ml-5 hover:text-gray-900">Profile</a>
-            <a href="index.html" target="_parent" class="ml-5 hover:text-gray-900">About</a>
-            <a href="index.html" target="_parent" class="ml-5 hover:text-gray-900">Contact</a>
+            <a href="index.php" target="_parent" class="hover:text-gray-900">Home</a>
+            <a href="index.php" target="_parent" class="ml-5 hover:text-gray-900">Profile</a>
+            <a href="index.php" target="_parent" class="ml-5 hover:text-gray-900">About</a>
+            <a href="index.php" target="_parent" class="ml-5 hover:text-gray-900">Contact</a>
+            <?php
+                if(isset($_SESSION["regnumber"])){
+                    echo "<a href='studentlogin.php' target='_parent' class='ml-5 hover:text-gray-900'>LogOut</a>";
+                }
+            ?>
         </nav>
     </header>
 
