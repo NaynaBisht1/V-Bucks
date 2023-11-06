@@ -44,7 +44,7 @@
 
                 <h2 class="font-bold text-3xl text-blue-900">Student Login</h2>
                 
-                <form action="#" class="flex flex-col gap-2 mt-4">
+                <form action="includes/loginstudent.inc.php" method = "post" class="flex flex-col gap-2 mt-4">
                     
                     <p class="text-blue-900 text-lg mt-2">Registration Number</p>
                     <input class="p-2 rounded-xl border" type="text" name="regnum" placeholder="22BCE1111">
@@ -58,9 +58,21 @@
                         </svg>
                     </div>
 
-                    <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4" type="button" onclick="location.href='studentHomePg.html'">Login</button>
-
+                    <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4" type="submit" name = "submit">Login</button>
                 </form>
+                <?php
+                    if(isset($_GET["error"])) {
+                        if($_GET["error"] == "emptyinput"){
+                            echo "<p>Fill in all the Fields!</p>";
+                        }
+                        else if($_GET["error"] == "wronglogin") {
+                            echo "<p>Please try again.</p>";
+                        }
+                        else if($_GET["error"] == "wrongpassword") {
+                            echo "<p>Wrong password entered!</p>";
+                        }
+                    }
+                ?>
             </div>
             <div class="w-1/2 ">
                 <img class="rounded-xl block animated-image" 
