@@ -66,17 +66,17 @@
 </head>
 <body>
 
-    <iframe src="header.html" title="Header" width="100%" height="100"></iframe>
+    <iframe src="header.php" title="Header" width="100%" height="100"></iframe>
 
     <main>
         <section>
             <h2>
-                <a href="UnderConstruction.html">Your Payments</a>
+                <a href="UnderConstruction.php">Your Payments</a>
                 <a href="http://" target="_blank" rel="noopener noreferrer"></a>
 
         </section>
     </main>
     
-    <iframe src="footer.html" title="Footer" class="footer"></iframe>
+    <iframe src="footer.php" title="Footer" class="footer"></iframe>
 </body>
 </html>
