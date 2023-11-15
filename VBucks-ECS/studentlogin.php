@@ -36,7 +36,7 @@
   
   <div style="flex: 1;">
 
-    <iframe src="header.html" title="Header" width="100%" height="100"></iframe>
+    <iframe src="header.php" title="Header" width="100%" height="100"></iframe>
 
     <section class="bg-blue-50 min-h-screen flex items-center justify-center">
         <div class="bg-blue-100 flex rounded-2xl shadow-lg max-w-3xl p-5">
@@ -112,6 +112,6 @@
     </script>
   </div>
     
-    <iframe src="footer.html" title="Footer" class="footer"></iframe>
+    <iframe src="footer.php" title="Footer" class="footer"></iframe>
 </body>
 </html>
