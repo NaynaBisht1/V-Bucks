@@ -199,77 +199,36 @@
                 <table class="table2">
                     <tr>
                         <td>Pizza</td>
-                        <td>14</td>
+                        <td>2</td>
                     </tr>
                     <tr>
                         <td>Sandwich</td>
-                        <td>12</td>
+                        <td>2</td>
                     </tr>
                     <tr>
                         <td>Dessert</td>
                         <td>2</td>
                     </tr>
                     <tr>
-                        <td class="first-column">One Plus One Medium @649</td>
+                        <td>Burger</td>
                         <td>2</td>
                     </tr>
                     <tr>
-                        <td class="first-column">Garlic Bread</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td class="first-column">Appetizer</td>
-                        <td>12</td>
-                    </tr>
-                    <tr>
-                        <td class="first-column">Pasta</td>
-                        <td>9</td>
-                    </tr>
-                    <tr>
-                        <td class="first-column">San Francisco Pizzas : Lighter & Crispier</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td class="first-column">Drinks & Desserts</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td class="first-column">Late Night Cravings</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>Coffee</td>
-                        <td>6</td>
-                    </tr>
-                    <tr>
-                        <td>Pasta</td>
-                        <td>9</td>
-                    </tr>
-                    <tr>
                         <td>Noodles</td>
-                        <td>10</td>
+                        <td>1</td>
                     </tr>
                     <tr>
                         <td>Starters</td>
-                        <td>6</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>Dessert</td>
+                        <td>2</td>
                     </tr>
                     <tr>
                         <td>Coffee</td>
-                        <td>6</td>
+                        <td>2</td>
                     </tr>
-                    <tr>
-                        <td>Pasta</td>
-                        <td>9</td>
-                    </tr>
-                    <tr>
-                        <td>Noodles</td>
-                        <td>10</td>
-                    </tr>
-                    <tr>
-                        <td>Starters</td>
-                        <td>6</td>
-                    </tr>
-                    
                 </table>
             </div>
         
@@ -631,7 +590,7 @@
                         <tr>
                             <td><img src="pics/coffee.webp" alt="">Cappuccino</td>
                             <td>Coffe</td>
-                            <td><strong>&#8377 700</strong></td>
+                            <td><strong>&#8377 40</strong></td>
                             
                             <td>
                                 <div>
@@ -661,7 +620,7 @@
                         <tr>
                             <td><img src="pics/coffee.webp" alt="">Cafe Latte</td>
                             <td>Coffee</td>
-                            <td><strong>&#8377 50</strong></td>
+                            <td><strong>&#8377 40</strong></td>
                             
                             <td>
                                 <div>
