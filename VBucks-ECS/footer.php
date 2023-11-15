@@ -54,7 +54,7 @@
     <div style="flex: 1;">
         <!-- Your main content here -->
     </div>
-    <footer class="p-2 bg-white md:p-1 lg:p-2 ">
+    <footer class="p-2 bg-white md:p-1 lg:p-2">
         <div class="container px-5 mx-auto flex items-center sm:flex-col">
             <a class="flex title-font font-medium items-center md:justify-center justify-center text-gray-900">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-900 rounded-full" viewBox="0 0 24 24">
@@ -66,17 +66,17 @@
                 </p>
             <ul class="flex justify-center items-center mb-1 text-gray-900 dark:text-white">
                 <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6">About</a>
+                    <a href="AboutContent.php" target="_parent" class="mr-4 hover:underline md:mr-6">About</a>
                 </li>
                 <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6">FAQs</a>
+                    <a href="FAQContent.php" target="_parent" class="mr-4 hover:underline md:mr-6">FAQs</a>
                 </li>
                 <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6">Contact</a>
+                    <a href="index.php" target="_parent" class="mr-4 hover:underline md:mr-6">Contact</a>
                 </li>
                 
                 <li>
-                    <a href="#" class="mr-4 hover:underline md:mr-6">Developers</a>
+                    <a href="index.php" target="_parent" class="mr-4 hover:underline md:mr-6">Developers</a>
                 </li>
             </ul>
             <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">V-Bucks</a>. All Rights Reserved.</span>
