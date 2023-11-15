@@ -4,7 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Invoice</title>
-    <script src="bill.js"></script>
 
     <style>
 
@@ -15,6 +14,12 @@
             display: flex;
             flex-direction: column;
             flex: 1;
+        }
+
+        .total-amount {
+            text-align: right;
+            margin-top: 20px;
+            font-weight: bold;
         }
 
         .invoice-box {
@@ -194,28 +199,16 @@
                 <td>Price</td>
             </tr>
             
-            <tr class="item">
-                <td>Cheese Burger</td>
-                <td>2</td> <!-- Example quantity -->
-                <td>&#8377 360</td>
-            </tr>
-            <tr class="item">
-                <td>Grilled Sandwich</td>
-                <td>3</td> <!-- Example quantity -->
-                <td>&#8377 495</td>
-            </tr>
-            <tr class="item">
-                <td>Farmhouse Pizza</td>
-                <td>1</td> <!-- Example quantity -->
-                <td>&#8377 250</td>
-            </tr>
-            <tr class="item">
-                <td>Gulab Jamun</td>
-                <td>4</td> <!-- Example quantity -->
-                <td>&#8377 240</td>
-            </tr>
+            <tbody id="orderDetails">
+                <!-- This will be dynamically populated with selected items and prices -->
+            </tbody>
             
         </table>
+
+        <div id="totalAmount" class="total-amount">
+            <!-- This will be dynamically populated with the total amount -->
+        </div>
+        
         <div class="button-container">
             <button>Pay</button>
         </div>
@@ -223,5 +216,46 @@
     
 
     <iframe src="footer.php" title="Footer" class="footer"></iframe>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve selected items and prices from the previous page
+            var selectedItems = JSON.parse(localStorage.getItem("selectedItems")) || [];
+            var totalAmount = localStorage.getItem("totalAmount") || "0";
+
+            // Display selected items and prices
+            displayOrderDetails(selectedItems);
+
+            // Display total amount
+            displayTotalAmount(totalAmount);
+        });
+
+        function displayOrderDetails(selectedItems) {
+            var orderDetailsContainer = document.getElementById("orderDetails");
+
+            selectedItems.forEach(function (item) {
+                var row = document.createElement("tr");
+                var nameCell = document.createElement("td");
+                var quantityCell = document.createElement("td");
+                var priceCell = document.createElement("td");
+
+                nameCell.textContent = item.name;
+                quantityCell.textContent = `${item.quantity}`;
+                priceCell.textContent = `₹${item.price}`;
+
+                row.appendChild(nameCell);
+                row.appendChild(quantityCell);
+                row.appendChild(priceCell);
+                orderDetailsContainer.appendChild(row);
+            });
+        }
+
+        function displayTotalAmount(totalAmount) {
+            var totalAmountContainer = document.getElementById("totalAmount");
+            totalAmountContainer.textContent = `Total Amount: ₹${totalAmount}`;
+        }
+    </script>
+
+
 </body>
 </html>
