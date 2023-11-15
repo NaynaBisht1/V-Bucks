@@ -700,5 +700,5 @@
         
     <iframe src="footer.php" title="Footer" class="footer"></iframe>
     
-</body>
+    </body>
 </html>
