@@ -690,12 +690,61 @@
 
                     </tbody>
                 </table>
+
+                <script>
+                    document.addEventListener("DOMContentLoaded", function () {
+                        // Calculate and display the total when the page loads
+                        calculateTotal();
+                    });
+                
+                    function incrementValue(input) {
+                        var value = parseInt(input.previousElementSibling.value, 10);
+                        input.previousElementSibling.value = isNaN(value) ? 1 : value + 1;
+                
+                        // Recalculate the total when quantity changes
+                        calculateTotal();
+                    }
+                
+                    function decrementValue(input) {
+                        var value = parseInt(input.nextElementSibling.value, 10);
+                        if (value > 0) {
+                            input.nextElementSibling.value = value - 1;
+                
+                            // Recalculate the total when quantity changes
+                            calculateTotal();
+                        }
+                    }
+                
+                    function calculateTotal() {
+                        var total = 0;
+                
+                        // Iterate through all rows in the table body
+                        var rows = document.querySelectorAll(".table-body tbody tr");
+                        rows.forEach(function (row) {
+                            var quantity = parseInt(row.cells[3].querySelector("input").value, 10);
+                            var price = parseInt(row.cells[2].innerText.replace(/[^\d]/g, ''), 10); // Extract numeric part from the price
+                
+                            // Update the total for items with quantity > 0
+                            if (quantity > 0) {
+                                total += quantity * price;
+                            }
+                        });
+                
+                        // Display the total amount
+                        return total;
+                    }
+                
+                    function addToCart() {
+                        var total = calculateTotal(); // Get the total price
+                        alert(`Total Price: \u20B9${total}`);
+                    }
+                </script>
+                
+                <div class="button-container">
+                    <button class="cart" onclick="addToCart()">Add To Cart</button>
+                </div>
+
             </section>
-            <div class="button-container">
-                <a href="billing.php">
-                    <button class="cart">Add To Cart</button>
-                </a>
-            </div>
         </main>
         
     <iframe src="footer.php" title="Footer" class="footer"></iframe>
