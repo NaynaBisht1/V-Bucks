@@ -67,10 +67,10 @@
                 <a href="RegisterStudent.php">
                     <button class="m-2 md:w-auto bg-blue-900 hover:bg-blue-300 text-white py-2 px-4 rounded">Register as Student</button>
                 </a>        
-                <a href="StoreLogin.php">
+                <a href="storelogin.php">
                     <button class="m-2 md:w-auto bg-blue-900 hover:bg-blue-300 text-white py-2 px-4 rounded">Login as Store</button>
                 </a>
-                <a href="StudentLogin.php">    
+                <a href="studentlogin.php">    
                     <button class="m-2 md:w-auto bg-blue-900 hover:bg-blue-300 text-white py-2 px-4 rounded">Login as Student</button>
                 </a>
                 </div>
