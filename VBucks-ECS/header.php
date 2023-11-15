@@ -50,8 +50,9 @@
         </div>
         <nav class="flex">
             <a href="index.php" target="_parent" class="hover:text-gray-900">Home</a>
-            <a href="index.php" target="_parent" class="ml-5 hover:text-gray-900">Profile</a>
-            <a href="index.php" target="_parent" class="ml-5 hover:text-gray-900">About</a>
+            <a href="MyProfile.php" target="_parent" class="ml-5 hover:text-gray-900">Student Profile</a>
+            <a href="StoreProfile.php" target="_parent" class="ml-5 hover:text-gray-900">Store Profile</a>
+            <a href="AboutContent.php" target="_parent" class="ml-5 hover:text-gray-900">About</a>
             <a href="index.php" target="_parent" class="ml-5 hover:text-gray-900">Contact</a>
             <?php
                 if(isset($_SESSION["regnumber"])){
