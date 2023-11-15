@@ -71,7 +71,7 @@
 </head>
 <body>
 
-    <iframe src="header.html" title="Header" width="100%" height="100"></iframe>
+    <iframe src="header.php" title="Header" width="100%" height="100"></iframe>
 
     <main>
         <section>
@@ -97,6 +97,6 @@
         </section>
     </main>
     
-    <iframe src="footer.html" title="Footer" class="footer"></iframe>
+    <iframe src="footer.php" title="Footer" class="footer"></iframe>
 </body>
 </html>
