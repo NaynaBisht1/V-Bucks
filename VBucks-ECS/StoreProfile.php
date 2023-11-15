@@ -6,15 +6,14 @@
    <title>Profile</title>
    <style>
        *{
-           
-           margin: 0;
-           padding: 0;
-           box-sizing: border-box;
-           text-decoration: none;
-           font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-           font-size: large;
-       }
-       body b {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: large;
+        }
+        body b {
             min-height: 50vh; /* Adjusted min-height */
             justify-content: center;
             align-items: center;
@@ -24,29 +23,29 @@
             padding: 10%;
             padding-right: 45px;
             border: #153b72;
+        } 
+        form{
+            min-height: 80vh;
+            justify-content: center;
+            align-items: center;
+            display: grid;
+            color:  #153b72;
+            
         }
-       form{
-           min-height: 80vh;
-           justify-content: center;
-           align-items: center;
-           display: grid;
-           color:  #153b72;
-          
-       }
-       h1{
-           align-items: center;
-           justify-content: center;
-           display: flex;
-           font-size:xx-large;
-       }
-       iframe.footer {
-           width: 100%;
-           height: 180px; /* Adjust the height of the iframe as needed */
-           border: none; /* Remove the border to avoid extra space */
-           bottom: 0;
-       }
+        h1{
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            font-size:xx-large;
+        }
+        iframe.footer {
+            width: 100%;
+            height: 180px; /* Adjust the height of the iframe as needed */
+            border: none; /* Remove the border to avoid extra space */
+            bottom: 0;
+        }
        
-       button {
+        button {
             background-color: rgb(30 58 138);
             color: #fff;
             border: none;
