@@ -144,8 +144,9 @@
     </style>
 </head>
 <body>
+<div style="flex: 1;">
 
-    <iframe src="header.php" title="Header" width="100%" height="80"></iframe>
+    <iframe src="header.php" title="Header" width="100%" height="100"></iframe>
     
     <div class="invoice-box" >
         <table cellpadding="0" cellspacing="0">
@@ -210,11 +211,11 @@
         </div>
         
         <div class="button-container">
-            <button>Pay</button>
+            <button type="button" onclick="location.href='payment.php'">Pay</button>
+
         </div>
     </div>
-    
-
+    </div>
     <iframe src="footer.php" title="Footer" class="footer"></iframe>
 
     <script>
