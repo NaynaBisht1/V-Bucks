@@ -735,8 +735,28 @@
                     }
                 
                     function addToCart() {
-                        var total = calculateTotal(); // Get the total price
-                        alert(`Total Price: \u20B9${total}`);
+                        var selectedItems = [];  // Array to store selected items
+                        var total = calculateTotal();  // Get the total price
+
+                        // Iterate through all rows in the table body
+                        var rows = document.querySelectorAll(".table-body tbody tr");
+                        rows.forEach(function (row) {
+                            var quantity = parseInt(row.cells[3].querySelector("input").value, 10);
+                            var name = row.cells[0].innerText;
+                            var price = parseInt(row.cells[2].innerText.replace(/[^\d]/g, ''), 10); // Extract numeric part from the price
+
+                            // Add selected items to the array
+                            if (quantity > 0) {
+                            selectedItems.push({ name: name, quantity: quantity, price: quantity * price });
+                        }
+                        });
+
+                        // Store selected items and total amount in localStorage
+                        localStorage.setItem("selectedItems", JSON.stringify(selectedItems));
+                        localStorage.setItem("totalAmount", total);
+
+                        // Redirect to payment.html
+                        window.location.href = 'billing.php';
                     }
                 </script>
                 
