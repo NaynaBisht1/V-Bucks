@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -144,9 +147,8 @@
     </style>
 </head>
 <body>
-<div style="flex: 1;">
 
-    <iframe src="header.php" title="Header" width="100%" height="100"></iframe>
+    <iframe src="header.php" title="Header" width="100%" height="80"></iframe>
     
     <div class="invoice-box" >
         <table cellpadding="0" cellspacing="0">
@@ -155,7 +157,11 @@
                     <table>
                         <tr>
                             <td>
-                                <h1>Stor123</h1>
+                                <h1>
+                                <?php
+                                    echo $_SESSION["regnumber"];
+                                ?>
+                                </h1>
                             </td>
                             <td>
                                 Invoice #: 13
@@ -174,7 +180,12 @@
                     <table>
                         <tr>
                             <td>
-                                Bill To: Stor123 <br>
+                            <?php
+                                if(isset($_SESSION["regnumber"])){
+                                    echo "Bill To: ", $_SESSION["regnumber"];
+                                }
+                            ?>
+                            <br>
                                 Phone: +919857662058
                             </td>
                         </tr>
@@ -211,11 +222,38 @@
         </div>
         
         <div class="button-container">
-            <button type="button" onclick="location.href='payment.php'">Pay</button>
-
+            <a href='bill.php'>
+                <button>Pay</button>
+            </a>
         </div>
+                <?php
+                    if(isset($_GET["error"])) {
+                        if($_GET["error"] == "stmtfail"){
+                            echo "<p>Please try again.</p>";
+                        }
+                        else if($_GET["error"] == "stmtexecfail"){
+                            echo "<p>Technical failure.</p>";
+                        }
+                        else if($_GET["error"] == "fetchfail" || $_GET["error"] == "stmtfailed") {
+                            echo "<p>Connection to database failed.</p>";
+                        }
+                        else if($_GET["error"] == "stmt2fail"){
+                            echo "<p>Please try again.</p>";
+                        }
+                        else if($_GET["error"] == "stmt2execfail"){
+                            echo "<p>Technical failure.</p>";
+                        }
+                        else if($_GET["error"] == "feth2fail"){
+                            echo "<p>Connection to database failed.</p>";
+                        }
+                        else if($_GET["error"] == "insufficientbalance") {
+                            echo "<p>You do not have required funds!</p>";
+                        }
+                    }
+                ?>
     </div>
-    </div>
+    
+
     <iframe src="footer.php" title="Footer" class="footer"></iframe>
 
     <script>
