@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,7 +86,13 @@
         </section>
 
         <section>
-            <h2><a href="AvailableVBucks.html" class="font-bold text-3xl text-blue-900">Available V-Bucks</a>
+            <h2><a class="font-bold text-3xl text-blue-900">
+            <?php
+                if(isset($_SESSION["regnumber"])){
+                    echo "Available V-Bucks: ", $_SESSION["bucks"];
+                    }
+            ?>
+                </a>
                 <a href="http://" target="_blank" rel="noopener noreferrer"></a>
             </h2>
         </section>
