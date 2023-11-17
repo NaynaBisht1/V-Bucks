@@ -68,7 +68,7 @@ function loginUser($conn, $regnum, $pwd){
     }
     else if($checkPwd == true){
         session_start();
-        $_SESSION["regnumber"] = $regnumexists["regnum"];
+        $_SESSION["regnumber"] = $regnumexists["storesName"];
         header("location: ../billing.html");
         exit(); 
     }
