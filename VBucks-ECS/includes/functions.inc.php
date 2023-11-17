@@ -69,7 +69,7 @@ function loginUser($conn, $regnum, $pwd){
     else if($checkPwd == true){
         session_start();
         $_SESSION["regnumber"] = $regnumexists["regnum"];
-        header("location: ../studentHomePg.html");
+        header("location: ../studentHomePg.php");
         exit(); 
     }
 }
