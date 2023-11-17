@@ -57,6 +57,17 @@
                     <p class="text-blue-900 text-lg mt-2">Registration Number</p>
                     <input class="p-2 rounded-xl border" type="text" name="regnum" placeholder="22BCE1111">
                     
+                    <?php
+                        exec("python ./sayhello.py", $output, $returnCode);
+
+                        if ($returnCode === 0) {
+                            echo "Python script executed successfully. Output: " . implode("\n", $output);
+                        } else {
+                            echo "Error executing Python script. Return code: $returnCode";
+                        }
+                    ?>
+
+
                     <p class="text-blue-900 text-lg mt-2">Amount</p>
                     <div class="relative">
                         <input class="p-2 rounded-xl border w-full" type="text" name="amount">
@@ -65,6 +76,31 @@
                     <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4" type="submit" name = "submit" >Pay</button>
 
                 </form>
+                <?php
+                    if(isset($_GET["error"])) {
+                        if($_GET["error"] == "stmtfail"){
+                            echo "<p>Please try again.</p>";
+                        }
+                        else if($_GET["error"] == "stmtexecfail"){
+                            echo "<p>Technical failure.</p>";
+                        }
+                        else if($_GET["error"] == "fetchfail" || $_GET["error"] == "stmtfailed") {
+                            echo "<p>Connection to database failed.</p>";
+                        }
+                        else if($_GET["error"] == "stmt2fail"){
+                            echo "<p>Please try again.</p>";
+                        }
+                        else if($_GET["error"] == "stmt2execfail"){
+                            echo "<p>Technical failure.</p>";
+                        }
+                        else if($_GET["error"] == "feth2fail"){
+                            echo "<p>Connection to database failed.</p>";
+                        }
+                        else if($_GET["error"] == "insufficientbalance") {
+                            echo "<p>You do not have required funds!</p>";
+                        }
+                    }
+                ?>
                 </div>
     </section>
   </div>

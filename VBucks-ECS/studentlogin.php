@@ -58,8 +58,7 @@
                         </svg>
                     </div>
 
-                    <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4" type="button" onclick="location.href='studentHomePg.php'">Login</button>
-
+                    <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4" type="submit" name = "submit">Login</button>
                 </form>
                 <?php
                     if(isset($_GET["error"])) {

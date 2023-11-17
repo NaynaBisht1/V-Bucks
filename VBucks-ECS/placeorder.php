@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -155,7 +158,11 @@
 <body>
         <iframe src="header.php" title="Header" width="100%" height="80"></iframe>
 
-        <h2>Welcome To Stor123</h2>
+        <h2>
+        <?php
+            echo "Welcome To ", $_SESSION["regnumber"];
+        ?> 
+        </h2>
         
         <div>
             <div class="button-container2">

@@ -24,7 +24,7 @@ def read_rfid(port, baud_rate):
 
 if __name__ == "__main__":
     # Replace 'COMx' with the actual port where your CP2102 is connected
-    port_name = 'COM4'
+    port_name = 'COM3'
     # Replace '9600' with the baud rate of your CP2102 (common baud rates are 9600, 115200, etc.)
     baud_rate = 9600
 
