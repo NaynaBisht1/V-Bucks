@@ -25,12 +25,18 @@
                 transform: translateY(10px); /* Adjust the distance to move in the y-axis */
             }
         }
+        #rfidNumber {
+            height: 40px;
+            font-size: 16px;
+            width: 120%;
+            max-width: 400px;
+        }
         
         iframe.footer {
-        width: 100%;
+        width: 100%;    
         height: 180px;
         border: none;
-        margin-top: 20px; /* Added line */
+        margin-top: 200px; /* Added line */
         }
         
     </style>
@@ -51,27 +57,53 @@
                     echo $_SESSION["regnumber"];
                 ?>
                 </h2>
+                <?php  
+                    //Connect to database
+                    require 'includes/dbh.inc.php';
+                    if (isset($_GET['card_uid']) && isset($_GET['device_token'])) {
+                        $card_uid = $_GET['card_uid'];
+                        $device_uid = $_GET['device_token'];
+                        $sql = "SELECT * FROM users WHERE card_uid=?";
+                        $result = mysqli_stmt_init($conn);
+                        if (!mysqli_stmt_prepare($result, $sql)) {
+                            echo "SQL_Error_Select_card";
+                            exit();
+                        }
+                        else{
+                            mysqli_stmt_bind_param($result, "s", $card_uid);
+                            mysqli_stmt_execute($result);
+                            $resultl = mysqli_stmt_get_result($result);
+                            if($row = mysqli_fetch_assoc($resultl)){
+                                $_SESSION["registration"] = $row["card_uid"];
+                            } else {
+                                echo "card_uid not found";
+                                exit();
+                            }
+                        }
+                    }
+                ?>
+
                 
                 <form action="includes/payment.inc.php" method = "post" class="flex flex-col gap-2 mt-4">
                     
                     <p class="text-blue-900 text-lg mt-2">Registration Number</p>
-                    <input class="p-2 rounded-xl border" type="text" name="regnum" placeholder="22BCE1111">
-                    
-                    <?php
-                        exec("python ./sayhello.py", $output, $returnCode);
-
-                        if ($returnCode === 0) {
-                            echo "Python script executed successfully. Output: " . implode("\n", $output);
-                        } else {
-                            echo "Error executing Python script. Return code: $returnCode";
-                        }
-                    ?>
-
+                    <input class="p-2 rounded-xl border" type="text" name="regnum" value="<?php echo isset($_SESSION['registration']) ? $_SESSION['registration'] : ''; ?>">
 
                     <p class="text-blue-900 text-lg mt-2">Amount</p>
                     <div class="relative">
-                        <input class="p-2 rounded-xl border w-full" type="text" name="amount">
+                        <input class="p-2 rounded-xl border w-full" type="text" name="amount" value="<?php echo isset($_SESSION['amount']) ? $_SESSION['amount'] : ''; ?>">
                     </div>
+
+                    <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4" 
+        type="button" onclick="executePythonScript()">RFID</button>
+    <input id="rfidNumber" class="p-2 rounded-xl border w-full" type="text" readonly>
+    <script>
+        function executePythonScript() {
+            // Set a static value for demonstration purposes
+            const successValue = 'Success';
+            document.getElementById('rfidNumber').value = successValue;
+        }
+    </script>
 
                     <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4" type="submit" name = "submit" >Pay</button>
 
