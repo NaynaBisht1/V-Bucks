@@ -95,14 +95,35 @@
                     </div>
 
                     <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4" 
-        type="button" onclick="executePythonScript()">RFID</button>
+        type="button" onclick="scanRFID1">RFID</button>
     <input id="rfidNumber" class="p-2 rounded-xl border w-full" type="text" readonly>
     <script>
-        function executePythonScript() {
+        function scanRFID1 {
             // Set a static value for demonstration purposes
             const successValue = 'Success';
             document.getElementById('rfidNumber').value = successValue;
         }
+        function scanRFID2() {
+  fetch('/').then(response => response.text())
+    .then(rfidValue => {
+      document.getElementById('rfidNumber').value = rfidValue;
+    })
+    .catch(error => {
+      console.error(`Error fetching RFID value: ${error}`);
+    });
+    function scanRFID3() {
+  // Simulate scanning RFID (replace this with actual RFID scanning logic)
+  const scannedNumber = generateRandomNumber(); // Replace with your RFID scanning logic
+
+  // Update the value in the input field
+  document.getElementById('rfidNumber').value = scannedNumber;
+}
+
+function generateRandomNumber() {
+  // Generate a random number as a placeholder (replace this with actual RFID data)
+  return Math.floor(Math.random() * 1000000).toString();
+}
+}
     </script>
 
                     <button class="bg-blue-900 rounded-xl text-white py-2 cursor-pointer hover:scale-105 duration-300 mt-4" type="submit" name = "submit" >Pay</button>
