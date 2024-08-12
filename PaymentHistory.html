@@ -1,17 +1,9 @@
-<?php
-    session_start();
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Home Page</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Dancing+Script:wght@600&family=Teko:wght@300&display=swap" rel="stylesheet">
-
-    
+    <title>PaymentHistory</title>
     <style>
         /* body{
             background-image: url('CASHLESS PAYMENT.jpg');
@@ -79,30 +71,9 @@
     <main>
         <section>
             <h2>
-                <a href="UpdateVBucks.html" class="font-bold text-3xl text-blue-900">Update V-Bucks</a>
+                <a href="UnderConstruction.html">Your Payments</a>
                 <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-            </h2>
-           
-        </section>
 
-        <section>
-            <h2><a class="font-bold text-3xl text-blue-900">
-            <?php
-                if(isset($_SESSION["regnumber"])){
-                    echo "Available V-Bucks: ", $_SESSION["bucks"];
-                    }
-            ?>
-                </a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-            </h2>
-        </section>
-
-        <section>
-            <h2>
-                <a href="PaymentHistory.html" class="font-bold text-3xl text-blue-900">Payment History</a>
-                <a href="http://" target="_blank" rel="noopener noreferrer"></a>
-            </h2>
-           
         </section>
     </main>
     
