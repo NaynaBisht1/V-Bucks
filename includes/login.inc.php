@@ -13,4 +13,11 @@
 
         loginUser($conn, $regnum, $pwd);
     }
+<<<<<<< HEAD
+=======
+    else {
+        header("location: ../studentlogin.php");
+        exit();
+    }
+>>>>>>> 5a431b8ee1604cc0dfcad666a4bca63fce23ae49
     

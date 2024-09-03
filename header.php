@@ -40,6 +40,10 @@
 <body>
 
     <header class="text-gray-600">
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 5a431b8ee1604cc0dfcad666a4bca63fce23ae49
         <div class="title-font flex items-center ">
             <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
             <svg style="width: 40px; height: 40px;" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-10 h-10 text-white p-2 bg-blue-900 rounded-full" viewBox="0 0 24 24">
@@ -56,7 +60,16 @@
             <a href="index.php" target="_parent" class="ml-5 hover:text-gray-900">Contact</a>
             <?php
                 if(isset($_SESSION["regnumber"])){
+<<<<<<< HEAD
                     echo "<a href='studentlogin.php' target='_parent' class='ml-5 hover:text-gray-900'>LogOut</a>";
+=======
+                    echo "<a href='studentlogin.php' target='_parent' class='ml-5 hover:text-gray-900'>Log Out</a>";
+                    echo "<li><a href='includes/logout.inc.php>Log Out</a><li>";
+                }
+                else {
+                    echo "<a href='studentlogin.php' target='_parent' class='ml-5 hover:text-gray-900'>Log In</a>";
+
+>>>>>>> 5a431b8ee1604cc0dfcad666a4bca63fce23ae49
                 }
             ?>
         </nav>

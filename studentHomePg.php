@@ -1,5 +1,10 @@
 <?php
+<<<<<<< HEAD
     session_start();
+=======
+  include_once 'header.php';
+
+>>>>>>> 5a431b8ee1604cc0dfcad666a4bca63fce23ae49
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,10 +79,23 @@
 </head>
 <body>
 
+<<<<<<< HEAD
     <iframe src="header.php" title="Header" width="100%" height="100"></iframe>
 
     <main>
         <section>
+=======
+    <!-- <iframe src="header.php" title="Header" width="100%" height="100"></iframe> -->
+
+    <main>
+        <section>
+        <?php
+                if(isset($_SESSION["regnumber"])){
+                    // echo "<a href='studentlogin.php' target='_parent' class='ml-5 hover:text-gray-900'>Log Out</a>";
+                    echo "<p> Hello there " . $_SESSION["regnumber"] . "</p>";
+                }
+                ?>
+>>>>>>> 5a431b8ee1604cc0dfcad666a4bca63fce23ae49
             <h2>
                 <a href="UpdateVBucks.html" class="font-bold text-3xl text-blue-900">Update V-Bucks</a>
                 <a href="http://" target="_blank" rel="noopener noreferrer"></a>

@@ -149,6 +149,10 @@
             /* Your existing box styles */
             z-index: 3; /* Ensure the box is displayed above the overlay */
         }
+<<<<<<< HEAD
+=======
+    /* Your existing CSS rules */
+>>>>>>> 5a431b8ee1604cc0dfcad666a4bca63fce23ae49
 
     </style>
 

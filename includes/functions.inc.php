@@ -62,11 +62,19 @@ function loginUser($conn, $regnum, $pwd){
     }
     $pwdhashed = $regnumexists["usersPwd"];
     $checkPwd = password_verify($pwd, $pwdhashed);
+<<<<<<< HEAD
     if($checkPwd == false){
         header("location: ../studentlogin.php?error=wrongpassword");
         exit();
     }
     else if($checkPwd == true){
+=======
+    if($checkPwd === false){
+        header("location: ../studentlogin.php?error=wrongpassword");
+        exit();
+    }
+    else if($checkPwd === true){
+>>>>>>> 5a431b8ee1604cc0dfcad666a4bca63fce23ae49
         session_start();
         $_SESSION["regnumber"] = $regnumexists["regnum"];
         header("location: ../studentHomePg.php");

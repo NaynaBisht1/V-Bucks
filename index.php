@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 5a431b8ee1604cc0dfcad666a4bca63fce23ae49
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -50,10 +55,18 @@
 <body>
 
     <div style="flex: 1;">
+<<<<<<< HEAD
 
         <iframe src="header.php" title="Header" width="100%" height="100"></iframe>
         
         <section class="text-gray-600 body-font">
+=======
+        
+        <iframe src="header.php" title="Header" width="100%" height="100"></iframe> 
+        
+        <section class="text-gray-600 body-font">
+            
+>>>>>>> 5a431b8ee1604cc0dfcad666a4bca63fce23ae49
             <div class="container mx-auto flex flex-col px-5 items-center justify-center">
             <img class="lg:w-2/6 md:w-3/6 w-5/6 mb-3 object-cover object-center rounded animated-image" alt="hero" src="pics/pngwing.com.png">
             <div class="text-center lg:w-2/3 w-full">
@@ -80,5 +93,9 @@
     </div>
 
     <iframe src="footer.php" title="Footer" class="footer"></iframe>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5a431b8ee1604cc0dfcad666a4bca63fce23ae49
 </body>
 </html>
